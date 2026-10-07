@@ -1,0 +1,42 @@
+# ─── Web framework ────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+python-multipart==0.0.9          # file upload support
+
+# ─── IBM watsonx.ai SDK ───────────────────────────────────────────────────────
+ibm-watsonx-ai==1.0.10
+
+# ─── Vector store (RAG) ───────────────────────────────────────────────────────
+chromadb==0.5.3
+sentence-transformers==3.0.1     # local embeddings (fallback when watsonx offline)
+
+# ─── Document ingestion ───────────────────────────────────────────────────────
+pypdf==4.2.0
+python-docx==1.1.2
+
+# ─── Weather / HTTP ───────────────────────────────────────────────────────────
+httpx==0.27.0
+aiohttp==3.9.5
+
+# ─── Data / ML ────────────────────────────────────────────────────────────────
+pandas==2.1.4
+numpy==1.26.4
+Pillow==10.3.0
+torch==2.3.1                    # plant disease classifier
+torchvision==0.18.1
+
+# ─── Streamlit frontend ───────────────────────────────────────────────────────
+streamlit==1.36.0
+plotly==5.22.0
+streamlit-webrtc==0.47.7        # voice input
+SpeechRecognition==3.10.4
+
+# ─── Translation (multilingual) ───────────────────────────────────────────────
+deep-translator==1.11.4
+
+# ─── Utilities ────────────────────────────────────────────────────────────────
+pydantic==2.7.4
+pydantic-settings==2.3.4
+python-dotenv==1.0.1
+loguru==0.7.2
+tenacity==8.3.0                  # retry logic for API calls

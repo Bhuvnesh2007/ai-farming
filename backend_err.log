@@ -1,0 +1,17 @@
+2026-10-07 12:49:50.146 | INFO     | backend.agents.crop_advisory_agent:<module>:31 - RAG: using sentence-transformers embeddings
+INFO:     Started server process [17300]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-10-07 13:03:15.162 | INFO     | backend.main:chat:108 - /api/chat | query='How do I irrigate wheat this week?' | crop=wheat
+2026-10-07 13:03:15.162 | INFO     | backend.agents.orchestrator:orchestrate:172 - [Orchestrator] Routing to agents: ['weather', 'rag']
+2026-10-07 13:03:15.166 | INFO     | backend.agents.weather_agent:run:159 - [WeatherAgent] lat=30.901, lon=75.8573, crop=wheat
+2026-10-07 13:03:15.166 | INFO     | backend.agents.crop_advisory_agent:run:164 - [CropAdvisoryAgent] Query: How do I irrigate wheat this week?
+Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-10-07 13:03:15.660 | INFO     | backend.agents.crop_advisory_agent:_get_collection:69 - RAG: connected to collection 'farming_knowledge' (38 chunks)
+Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+2026-10-07 13:03:20.113 | INFO     | backend.tools.granite_client:_init:338 - Using smart offline stub (no API key needed)
+2026-10-07 13:03:21.103 | INFO     | backend.tools.granite_client:_init:338 - Using smart offline stub (no API key needed)
+2026-10-07 13:07:56.281 | INFO     | backend.main:chat:108 - /api/chat | query='What pests affect rice in monsoon?' | crop=wheat
+2026-10-07 13:07:56.281 | INFO     | backend.agents.orchestrator:orchestrate:172 - [Orchestrator] Routing to agents: ['rag']
+2026-10-07 13:07:56.281 | INFO     | backend.agents.crop_advisory_agent:run:164 - [CropAdvisoryAgent] Query: What pests affect rice in monsoon?

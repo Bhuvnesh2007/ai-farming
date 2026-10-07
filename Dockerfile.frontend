@@ -1,0 +1,19 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN pip install --no-cache-dir \
+    streamlit==1.36.0 \
+    plotly==5.22.0 \
+    deep-translator==1.11.4 \
+    SpeechRecognition==3.10.4 \
+    requests==2.32.3 \
+    pandas==2.2.2
+
+COPY frontend/ ./frontend/
+
+EXPOSE 8501
+CMD ["streamlit", "run", "frontend/app.py", \
+     "--server.port=8501", \
+     "--server.address=0.0.0.0", \
+     "--server.headless=true"]
